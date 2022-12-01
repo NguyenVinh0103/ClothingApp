@@ -1,10 +1,23 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
+
+import {IC_NOTIFICATION} from '../../assets';
 
 export const Home = () => {
   return (
     <View style={styles.container}>
-      <Text>index</Text>
+      <View style={styles.content}>
+        <View style = {styles.txt}>
+          <Text style={styles.txtContent}>index</Text>
+          <Text style={styles.txtHi}>index</Text>
+        </View>
+
+        <Image
+          source={IC_NOTIFICATION}
+          resizeMode="contain"
+          style={styles.imgNotification}
+        />
+      </View>
     </View>
   );
 };
@@ -12,7 +25,9 @@ export const Home = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+  },
+  content:{
+    flexDirection:'row',
+    justifyContent:'space-between'
   },
 });

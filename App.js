@@ -7,8 +7,7 @@ import { Provider } from 'react-redux';
 
 const App = () => {
   return (
-    <Provider store={Store}>
-      <SafeAreaProvider>
+    <SafeAreaProvider>
       <StatusBar
         barStyle={'dark-content'}
         backgroundColor={'transparent'}
@@ -16,7 +15,6 @@ const App = () => {
       />
       <RootNavigation />
     </SafeAreaProvider>
-    </Provider>
   );
 };
 
