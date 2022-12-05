@@ -5,14 +5,23 @@ import {All, Jacket, Jean, Shoes} from '../screens';
 
 const Tab = createMaterialTopTabNavigator();
 
-export const MaterialTab = () => {
+const MaterialTab = () => {
   return (
     <Tab.Navigator
-      initialRouteName="All"
       screenOptions={{
-        tabBarActiveTintColor: '#e91e63',
-        tabBarLabelStyle: {fontSize: 12},
-        tabBarStyle: {backgroundColor: '#000'},
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          position: 'absolute',
+          marginBottom: 16,
+          marginLeft: 12,
+          marginRight: 12,
+          elevation: 0,
+          backgroundColor: '#ffb6c1',
+          borderRadius: 12,
+          height: 44,
+          shadowColor: '#7fff00',
+          ...styles.shadow,
+        },
       }}>
       <Tab.Screen
         name="All"
@@ -20,7 +29,8 @@ export const MaterialTab = () => {
         options={{
           tabBarIcon: ({focused}) => (
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
-              <Text style={{color: focused ? '#fff' : '#000', fontSize: 12}}>
+              <Text
+                style={{color: focused ? '#e91e63' : '#e91e63', fontSize: 12}}>
                 {'All'}
               </Text>
             </View>
@@ -74,4 +84,16 @@ export const MaterialTab = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+export default MaterialTab;
+
+const styles = StyleSheet.create({
+  shadow: {
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.5,
+    elevation: 5,
+  },
+});

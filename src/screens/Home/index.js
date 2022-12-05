@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity,TextInput} from 'react-native';
 import React from 'react';
 
 import {IC_NOTIFICATION, IC_SEARCH, IMG_SLIDER, IC_NEXT} from '../../assets';
@@ -6,11 +6,12 @@ import {IC_NOTIFICATION, IC_SEARCH, IMG_SLIDER, IC_NEXT} from '../../assets';
 import {colors, normalize, normalizeHorizontal} from '../../helper';
 
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {TextInput} from 'react-native-gesture-handler';
-import { MaterialTab } from '../../navigation';
+import { useNavigation } from '@react-navigation/native';
+import MaterialTab from '../../navigation/materialTabs';
 
 export const Home = () => {
   const insets = useSafeAreaInsets();
+  const navigation = useNavigation();
   return (
     <View style={[styles.container, {paddingTop: Math.max(insets.top, 40)}]}>
       <View style={styles.content}>
@@ -43,7 +44,7 @@ export const Home = () => {
         <View style = {styles.txtSlider}>
           <Text style = {styles.txtSliderContainer}>{'Shop wit us!'}</Text>
           <Text style = {styles.txtSliderContent}>{'Get 40% Off for all iteams'}</Text>
-          <TouchableOpacity style = {styles.shopNow}>
+          <TouchableOpacity onPress={() => navigation.navigate('MaterialTab')}  style = {styles.shopNow}>
             <Text style = {styles.txtShop}>{'Shop now'}</Text>
             <Image source={IC_NEXT} style = {styles.icNext} resizeMode ='contain' />
           </TouchableOpacity>

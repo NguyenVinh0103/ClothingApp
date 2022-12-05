@@ -2,7 +2,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Hello, Home} from '../screens';
-import {MaterialTab} from './tabs';
+import MaterialTab  from './materialTabs';
 const Stack = createStackNavigator();
 export const RootNavigation = () => {
   return (
