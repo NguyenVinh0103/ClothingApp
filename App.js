@@ -5,6 +5,8 @@ import {RootNavigation} from './src/navigation/RootNavigation';
 import { Store } from './src/redux';
 import { Provider } from 'react-redux';
 
+
+
 const App = () => {
   return (
     <SafeAreaProvider>

@@ -1,4 +1,4 @@
 export const colors = {
-  BACKGROUND: '#000',
-  TEXT: '#fff'
+  BACKGROUND: '#fff',
+  TEXT: '#000'
 };
