@@ -7,6 +7,7 @@ import {colors, normalize, normalizeHorizontal} from '../../helper';
 
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {TextInput} from 'react-native-gesture-handler';
+import { MaterialTab } from '../../navigation';
 
 export const Home = () => {
   const insets = useSafeAreaInsets();
@@ -48,6 +49,7 @@ export const Home = () => {
           </TouchableOpacity>
         </View>
         <Image source={IMG_SLIDER} style = {styles.imgSlider} resizeMode = 'contain' />
+        <MaterialTab />
       </View>
     </View>
   );
