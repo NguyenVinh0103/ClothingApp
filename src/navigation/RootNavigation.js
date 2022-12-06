@@ -2,7 +2,6 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Hello, Home} from '../screens';
-import MaterialTab  from './materialTabs';
 const Stack = createStackNavigator();
 export const RootNavigation = () => {
   return (
@@ -16,11 +15,6 @@ export const RootNavigation = () => {
         <Stack.Screen
           name="Hello"
           component={Hello}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="MaterialTab"
-          component={MaterialTab}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

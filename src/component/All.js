@@ -1,16 +1,18 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export const Shoes = () => {
+const AllComp = () => {
   return (
     <View style = {styles.container}>
-      <Text>index</Text>
+      <Text>All</Text>
     </View>
   )
 }
 
+export const All = React.memo(AllComp)
+
 const styles = StyleSheet.create({
-    container:{
-        flex: 1
-    }
+  container : {
+    flex: 1
+  }
 })

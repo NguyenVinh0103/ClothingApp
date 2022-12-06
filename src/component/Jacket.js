@@ -1,12 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export const Jean = () => {
+const JacketComp = () => {
   return (
     <View>
-      <Text>index</Text>
+      <Text>Jacket</Text>
     </View>
   )
 }
+
+export const Jacket = React.memo(JacketComp)
 
 const styles = StyleSheet.create({})

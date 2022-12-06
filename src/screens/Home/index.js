@@ -7,7 +7,7 @@ import {colors, normalize, normalizeHorizontal} from '../../helper';
 
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
-import MaterialTab from '../../navigation/materialTabs';
+import { MaterialTab } from '../../component';
 
 export const Home = () => {
   const insets = useSafeAreaInsets();

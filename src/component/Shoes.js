@@ -1,16 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export const Jacket = () => {
+const ShoesComp = () => {
   return (
     <View style = {styles.container}>
-      <Text>index</Text>
+      <Text>Shoes</Text>
     </View>
   )
 }
 
-const styles = StyleSheet.create({
-    container:{
-        flex: 1
-    }
-})
+export const Shoes = React.memo(ShoesComp)
+
+const styles = StyleSheet.create({})
