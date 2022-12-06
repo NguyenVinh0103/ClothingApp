@@ -50,8 +50,8 @@ export const Home = () => {
           </TouchableOpacity>
         </View>
         <Image source={IMG_SLIDER} style = {styles.imgSlider} resizeMode = 'contain' />
-        <MaterialTab />
       </View>
+      <MaterialTab />
     </View>
   );
 };

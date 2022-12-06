@@ -6,6 +6,7 @@ import {Jacket} from './Jacket';
 import {Shoes} from './Shoes';
 import {height, normalize} from '../helper';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import {Hello} from '../screens';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -14,11 +15,12 @@ export const MaterialTab = () => {
     <Tab.Navigator
       screenOptions={{
         tabBarIndicatorStyle: {
-          backgroundColor: 'transparent',
+            backgroundColor: '#FF722A',
         },
         tabBarStyle: {
           width: '100%',
           justifyContent: 'center',
+          marginTop: normalize(20)
         },
         tabBarLabelStyle: {
           fontSize: normalize(14),
@@ -28,7 +30,7 @@ export const MaterialTab = () => {
           letterSpacing: normalize(1),
           textTransform: 'none',
           lineHeight: normalize(14),
-          width: '100%',
+          height: '100%',
           textAlign: 'center',
           height: 14,
         },

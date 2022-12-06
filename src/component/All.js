@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { height } from '../helper'
 
 const AllComp = () => {
   return (
@@ -13,6 +14,7 @@ export const All = React.memo(AllComp)
 
 const styles = StyleSheet.create({
   container : {
-    flex: 1
+    height: height,
+    backgroundColor: '#fff'
   }
 })
